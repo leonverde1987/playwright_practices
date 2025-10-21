@@ -12,5 +12,6 @@ test('Login with correct credentials', async({page})=> {
   await loginPage.login('customer@practicesoftwaretesting.com','welcome01');
 
   await dashPage.validateSesion("Jane Doe","My account");
+  await page.screenshot();
 
 });

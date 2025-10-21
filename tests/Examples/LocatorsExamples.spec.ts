@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test"
 
 test("getByRole getByPlaceholder getByText examples", async ({ page })=> {
-    await page.goto("https://practicesoftwaretesting.com/");
+    await page.goto('/');
     await page.getByRole('menuitem').getByText("Sign in").click();
     await page.getByPlaceholder('Your email').fill("customer@practicesoftwaretesting.com");
     await page.getByPlaceholder('Your password').fill('welcome01');
@@ -9,7 +9,7 @@ test("getByRole getByPlaceholder getByText examples", async ({ page })=> {
 });
 
 test("toBeVisible toBeEnabled toContainText examples", async ({ page })=> {
-    await page.goto("https://practicesoftwaretesting.com/");
+    await page.goto('/');
     await page.getByRole('menuitem').getByText("Sign in").click();
     await page.getByPlaceholder('Your email').fill("customer@practicesoftwaretesting.com");
     await page.getByPlaceholder('Your password').fill('welcome01');
